@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'SanFrancisco';    
+    src: url('./fonts/SF-Pro.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SanFrancisco', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 20px;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.medium-text {
+    font-size: 18px;
+}
+
+.large-text {
+    font-size: 24px;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(100% - 500px);
+    position: fixed;
+    top: 0;
+    left: 250px;
+    background-color: white;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+p1 {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.corner-text {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.headline {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 0;
+    font-size: 28px;
+}
+
+.home-image {
+    width: 15px;
+    height:15px;
+    transform: translateY(2px)
+}
+
+.search-image {
+    width: 16px;
+    height: 16px;
+    transform: translateY(3px)
+}
+
+.hyperlink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hyperlink:hover p1 {
+    text-decoration: underline;
+}
+
+.home-icon {
+    margin-right: 0;
+}
+
+body > *:not(.content-row) {
+    margin-top: 60px;
+}
