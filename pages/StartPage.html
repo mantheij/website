@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <script>
+        fetch('./global/navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => document.getElementById('navbar').innerHTML = data)
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <h1></h1>
+    <h1 class="headline">Jan Manthei</h1>
+
+    <p1>Use the top navigation bar to navigate between the pages. </p1>
+
+    <div class="corner-text">
+        this website was created for non-commercial use - 2024
+    </div>
+</body>
+</html>

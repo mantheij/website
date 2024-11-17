@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <script>
+        fetch('./global/navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => document.getElementById('navbar').innerHTML = data)
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <h1>About Me</h1>
+    <p class="medium-text">My name is Jan Manthei, I am a computer science student, currently in the fifth semester.</p>
+    <p></p>
+</body>
+</html>
