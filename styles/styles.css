@@ -89,6 +89,17 @@ p1 {
     margin-right: 0;
 }
 
+.navbar-line {
+    width: 200%;
+    height: 1px;
+    background-color: black;
+    position: fixed;
+    top: 0px;
+    left: -50%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 body > *:not(.content-row) {
     margin-top: 60px;
 }
