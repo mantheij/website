@@ -64,6 +64,13 @@ p1 {
     font-size: 28px;
 }
 
+.small_headline {
+    position: relative;
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 20px;
+}
+
 .home-image {
     width: 15px;
     height:15px;
@@ -102,5 +109,25 @@ p1 {
 
 body > *:not(.content-row) {
     margin-top: 60px;
+}
+
+.inline {
+    display: flex;
+    align-items: bottom;
+    width: 100%;
+}
+
+.left, .right {
+    margin: 0;
+    padding: 0 3px;
+    white-space: nowrap;
+}
+
+.dots {
+    flex-grow: 1;
+    border-bottom: 2px dotted black;
+    margin: 0 0;
+    transform: translateY(-4px);
+
 }
 
