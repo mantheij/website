@@ -1,3 +1,14 @@
+
+/*Color pallete for later use maybe*/
+:root{
+    --text: #1B1931;
+    --primary: #44174E;
+    --secondary: #662249;
+    --tertiary: #A34054;
+    --quarternary: #ED9E59;
+    --background: #E9BCB9;
+}
+
 @font-face {
     font-family: 'SanFrancisco';    
     src: url('../fonts/SF-Pro.woff2') format('woff2');
