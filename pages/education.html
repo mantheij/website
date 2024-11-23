@@ -22,7 +22,6 @@
     <div class="navbar-line"></div>
 
 
-    <h1></h1>
     <h1 class="headline">Education</h1>
 
 <div class="inline">
@@ -32,10 +31,25 @@
 </div>
 
 <div class="inline">
-    <p class="left">09/2022 - Today</p>
-    <p class="dots"></p>
-    <p class="right">Bachelor of Science, Applied Computer Science at Hochschule Heilbronn</p>
+    <p class="small-text left">09/2022 - Today</p>
+    <p class="small-text dots"></p>
+    <p class="small-text right">Bachelor of Science, Applied Computer Science at Hochschule Heilbronn</p>
 </div>
     <p></p>
+
+
+    <div id="corner-text"></div>
+    <script>
+        fetch('./global/cornertext.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => document.getElementById('corner-text').innerHTML = data)
+            .catch(error => console.error('Error loading cornertext:', error));
+    </script>
+
 </body>
 </html>

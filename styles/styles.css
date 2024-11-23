@@ -28,16 +28,31 @@ body {
     margin-top: 20px;
 }
 
-.small-text {
+.tiny-text {
     font-size: 12px;
 }
 
+.small-text {
+    font-size: 15px;
+    margin-bottom: -30px;
+}
+
 .medium-text {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .large-text {
+    padding-left: 50px;
     font-size: 24px;
+}
+
+.small-margin {
+    margin-bottom: -30px;
+}
+
+.large-margin {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .content-row {
@@ -135,3 +150,6 @@ body > *:not(.content-row) {
 
 }
 
+.indent {
+    margin-left: 50px;
+}

@@ -24,7 +24,23 @@
 
     <h1></h1>
     <h1 class="headline">About Me</h1>
-    <p1>My name is Jan Manthei, I am a computer science student, currently in the fifth semester.</p1>
+    <p1 class="small-text">My name is Jan Manthei, I am a computer science student at HHN, currently in the fifth semester.</p1>
+    <p1 class="small-text">In my free time I like to go to the gym, read in different languages or practice my coding skills.</p1>
     <p></p>
+
+
+    <div id="corner-text"></div>
+    <script>
+        fetch('./global/cornertext.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => document.getElementById('corner-text').innerHTML = data)
+            .catch(error => console.error('Error loading cornertext:', error));
+    </script>
+
 </body>
 </html>
