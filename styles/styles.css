@@ -45,6 +45,10 @@ body {
     font-size: 24px;
 }
 
+.tiny-margin{
+    margin-bottom: -60px;
+}
+
 .small-margin {
     margin-bottom: -30px;
 }
