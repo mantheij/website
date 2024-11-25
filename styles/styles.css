@@ -46,7 +46,7 @@ body {
 }
 
 .tiny-margin{
-    margin-bottom: -60px;
+    margin-bottom: -55px;
 }
 
 .small-margin {
@@ -110,6 +110,10 @@ p1 {
     color: inherit;
 }
 
+.hyperlink:hover{
+    text-decoration: underline;
+}
+
 .hyperlink:hover p1 {
     text-decoration: underline;
 }
@@ -154,5 +158,5 @@ body > *:not(.content-row) {
 }
 
 .indent {
-    margin-left: 50px;
+    margin-left: 30px;
 }
