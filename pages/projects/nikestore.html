@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jan Manthei</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="/icons/user.png">
+</head>
+<body>
+    <div id="navbar"></div>
+    <script>
+        fetch('/pages/global/navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data)
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+    <div class="navbar-line"></div>
+</body>
+</html>
+    <div class="navbar-line"></div>
+
+
+    <p1 class="headline small-margin">Nike Store</p1>
+    <p1 class="small-text tiny-margin">The web-application <span class="main-color">Fast Order</span> is an application for barkeepers as well as bar visitors.</p1>
+    <p1 class="small-text tiny-margin">It can be used by a visitor to order drinks and by an admin to manage the orders.</p1>
+    <p1 class="small-text tiny-margin">Features include: Live synchronization with other workers, automatically updated stock of drinks & easy to use and understand UI/UX</p1>
+    <p1></p1>
+    <p1 class="small-text tiny-margin">For more information or to try it yourself, please visit the projects github page: 
+        <a href="https://github.com/mantheij/fastorder" title="https://github.com/mantheij/fastorder" class="hyperlink" target="blank_">https://github.com/mantheij/fastorder</a>
+    </p1>
+    <p></p> 
+
+
+    <div id="corner-text"></div>
+    <script>
+        fetch('../global/cornertext.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => document.getElementById('corner-text').innerHTML = data)
+            .catch(error => console.error('Error loading cornertext:', error));
+    </script>
+
+</body>
+</html>

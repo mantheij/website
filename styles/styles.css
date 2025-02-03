@@ -26,13 +26,16 @@ body {
     margin-top: 20px;
 }
 
+.main-color {
+    color: rgb(144, 209, 255);
+}
+
 .tiny-text {
     font-size: 12px;
 }
 
 .small-text {
     font-size: 15px;
-    margin-bottom: -30px;
 }
 
 .medium-text {
@@ -44,7 +47,7 @@ body {
 }
 
 .tiny-margin{
-    margin-bottom: -55px;
+    margin-bottom: -50px !important;
 }
 
 .small-margin {
@@ -88,7 +91,7 @@ p1 {
     position: relative;
     margin-top: 0;
     margin-left: 0;
-    font-size: 28px;
+    font-size: 30px;
 }
 
 .home-image {
@@ -157,4 +160,45 @@ body > *:not(.content-row) {
 
 .indent {
     margin-left: 30px;
+}
+.skills-container {
+    display: flex;
+    justify-content: space-between; /* Äußere Spalten an den Rändern, mittlere in der Mitte */
+    width: 100%;
+    max-width: 100%; /* Überschreibt die vorherige max-width-Einschränkung */
+    margin: 0;
+    padding: 0; /* Entfernt den seitlichen Innenabstand */
+}
+
+.skills-column {
+    flex: 1;
+    margin: 0 10px; /* Horizontaler Abstand zwischen den Spalten */
+    text-align: center;
+}
+
+/* Entfernt den linken/rechten Abstand bei der ersten/letzten Spalte */
+.skills-column:first-child {
+    margin-left: 0;
+}
+
+.skills-column:last-child {
+    margin-right: 0;
+}
+
+.medium-text {
+    font-size: 1.5em;
+    margin-bottom: 20px; 
+}
+
+.small-text {
+    display: block; 
+    margin: 10px 0; 
+}
+
+.custom-hr {
+    height: 1px;
+    background-color: black;
+    margin: 10px 0;
+    width: 100%;
+    border: none;
 }
