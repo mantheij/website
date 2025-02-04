@@ -27,7 +27,62 @@
         <p1 class="tiny-text">Contact</p1>
     </a>
 
-    <a href="#" class="hyperlink">
-        <img src="/icons/search.svg" alt="Search" class="search-image">
-    </a>
+    <div class="search-container">
+        <div class="search-icon" onclick="toggleSearch()">
+            <img src="/icons/search.svg" alt="Search" class="search-image">
+        </div>
+        <div class="search-box" id="searchBox">
+            <input type="text" id="searchInput" placeholder="Suche...">
+            <div id="searchResults"></div>
+        </div>
+    </div>
 </div>
+
+<script>
+    // JavaScript-Code
+function toggleSearch() {
+    const searchBox = document.getElementById('searchBox');
+    searchBox.classList.toggle('active');
+    document.getElementById('searchInput').focus();
+}
+
+// Suchfunktion mit Debounce
+let searchTimeout;
+document.getElementById('searchInput').addEventListener('input', function(e) {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+        performSearch(e.target.value);
+    }, 300);
+});
+
+async function performSearch(query) {
+    if (!query) {
+        document.getElementById('searchResults').innerHTML = '';
+        return;
+    }
+
+    try {
+        // Annahme: Du hast einen API-Endpunkt für die Suche
+        const response = await fetch(`/search-api?q=${encodeURIComponent(query)}`);
+        const results = await response.json();
+        
+        const resultsHTML = results.map(result => `
+            <div class="search-result-item">
+                <a href="${result.url}">${result.title}</a>
+            </div>
+        `).join('');
+        
+        document.getElementById('searchResults').innerHTML = resultsHTML;
+    } catch (error) {
+        console.error('Search error:', error);
+    }
+}
+
+// Klick außerhalb schließt die Suchbox
+document.addEventListener('click', (e) => {
+    const searchContainer = document.querySelector('.search-container');
+    if (!searchContainer.contains(e.target)) {
+        document.getElementById('searchBox').classList.remove('active');
+    }
+});
+</script>

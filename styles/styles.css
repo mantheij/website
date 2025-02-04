@@ -79,12 +79,21 @@ p1 {
 }
 
 .corner-text {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 10px;
+    text-align: end;
+    margin: 0;
+    margin-right: 10px;
     font-size: 14px;
     color: #555;
+}
+
+.corner-container{
+    position: fixed;
+    bottom: 0;
+    right:0;
+    width: fit-content;
+    height: fit-content;
+    background-color: #ffffff;
+    margin: 0;
 }
 
 .headline {
@@ -163,20 +172,19 @@ body > *:not(.content-row) {
 }
 .skills-container {
     display: flex;
-    justify-content: space-between; /* Äußere Spalten an den Rändern, mittlere in der Mitte */
+    justify-content: space-between;
     width: 100%;
-    max-width: 100%; /* Überschreibt die vorherige max-width-Einschränkung */
+    max-width: 100%;
     margin: 0;
-    padding: 0; /* Entfernt den seitlichen Innenabstand */
+    padding: 0; 
 }
 
 .skills-column {
     flex: 1;
-    margin: 0 10px; /* Horizontaler Abstand zwischen den Spalten */
+    margin: 0 10px;
     text-align: center;
 }
 
-/* Entfernt den linken/rechten Abstand bei der ersten/letzten Spalte */
 .skills-column:first-child {
     margin-left: 0;
 }
@@ -212,4 +220,51 @@ footer {
     text-align: left;
     padding: 10px 0;
     font-size: 13px;
+}
+
+/* CSS-Anpassungen */
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-box {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.search-box.active {
+    display: block;
+}
+
+#searchInput {
+    width: 200px;
+    padding: 5px;
+}
+
+#searchResults {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 5px;
+}
+
+.image-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 100%;
+    margin: 5%;
+    padding: 0; 
+
+}
+
+.image{
+    width: 500px;
+    height: auto;
 }
