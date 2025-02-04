@@ -202,3 +202,14 @@ body > *:not(.content-row) {
     width: 100%;
     border: none;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: left;
+    padding: 10px 0;
+    font-size: 13px;
+}
